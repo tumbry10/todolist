@@ -1,0 +1,32 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+<h3>Hello Below are the list of all your tasks</h3>
+<a href="{% url 'taskCreate' %}">Create Task</a><br>
+<table border="1">
+    <thead>
+        <th>#</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ task.title }}</td>
+                <td>{{ task.description }}</td>
+                <td>
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
