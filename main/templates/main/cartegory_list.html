@@ -1,28 +1,24 @@
 {% extends 'partials/base.html' %}
 
 {% block title %}
-
+    Cartegory List
 {% endblock %}
 
 {% block content %}
-<h3>Hello Below are the list of all your tasks</h3>
+<h3>Hello Below are the list of all the Cartegories</h3>
 <a href="{% url 'taskCreate' %}">Create Task</a>  . <a href="{% url 'cartegoryCreate' %}">Create Cartegory</a><br>
 <p></p>
 <table border="1">
     <thead>
         <th>#</th>
-        <th>Title</th>
-        <th>Cartegory</th>
-        <th>Description</th>
+        <th>Name</th>
         <th>Action</th>
     </thead>
     <tbody>
-        {% for task in tasks %}
+        {% for cartegory in cartegories %}
             <tr>
                 <td>{{ forloop.counter }}</td>
-                <td>{{ task.title }}</td>
-                <td>{{ task.category }}</td>
-                <td>{{ task.description }}</td>
+                <td>{{ cartegory.name }}</td>
                 <td>
                     <a href="#">Edit</a>
                     <a href="#">Delete</a>

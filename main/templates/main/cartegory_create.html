@@ -1,0 +1,16 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}
+    Create New Cartegory
+{% endblock %}
+
+{% block content %}
+<h3>Hello Create a New Cartegory</h3>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Create Cartegory">
+</form>
+
+{% endblock %}
