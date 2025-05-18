@@ -1,0 +1,16 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}
+    Edit Cartegory
+{% endblock %}
+
+{% block content %}
+<h3>Hello, Edit the details of Cartegory: {{ cartegory.name }}</h3>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Edit Details">
+</form>
+
+{% endblock %}

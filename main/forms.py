@@ -7,8 +7,17 @@ class TaskCartegoryCreationForm(forms.ModelForm):
         fields = ('name',)
 
 
+class TaskCartegoryEditForm(forms.ModelForm):
+    class Meta:
+        model = TaskCartegory
+        fields = ('name',)
+
 class TaskCreationForm(forms.ModelForm):
     class Meta:
         model = Task
         fields = '__all__'
 
+class TaskEditForm(forms.ModelForm):
+    class Meta:
+        model = Task
+        fields = ['title', 'description', 'category']

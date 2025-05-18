@@ -20,8 +20,8 @@
                 <td>{{ forloop.counter }}</td>
                 <td>{{ cartegory.name }}</td>
                 <td>
-                    <a href="#">Edit</a>
-                    <a href="#">Delete</a>
+                    <a href="{% url 'editCategory' cartegory.id %}">Edit</a>
+                    <a href="{% url 'deleteCategory' cartegory.id %}">Delete</a>
                 </td>
             </tr>
         {% endfor %}

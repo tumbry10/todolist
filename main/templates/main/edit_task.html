@@ -1,0 +1,16 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}
+    Edit Task
+{% endblock %}
+
+{% block content %}
+<h3>Hello, Edit the details of Task: {{ task.title }}</h3>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Edit Details">
+</form>
+
+{% endblock %}
